@@ -23,4 +23,6 @@ MINIMIX — это экспериментальный язык программ�
 <CompilerKit — небольшие helpers для написания своих языков;
 <KernelKit и OsKit — безопасные OS-dev helpers;
 < HttpClientKit — helpers для URL и HTTP-запросов;
-а также библиотеки для JSON, TOML, CSV, Hash, Hex, Crypto, Path, File, Regex и других задач.
+а также библиотеки для JSON, TOML, CSV, Hash, Hex, Crypto, Path, File, Gfx, Regex и других задач.
+На данный момент версия MX это 0.1.4 
+
