@@ -6,23 +6,35 @@ MINIMIX — это экспериментальный язык программ�
 Главная идея MINIMIX — сделать язык, который можно использовать не только для учебных примеров, но и для реальных маленьких программ, графических демо, CLI-инструментов, экспериментов с компиляторами, VM, runtime и в будущем — с freestanding / OS-dev направлением.
 
 Стандартная библиотека и экосистема
-В lib/ есть набор библиотек, которые расширяют язык и делают его удобнее для обычных программ.
+В есть набор библиотек, которые расширяют язык и делают его удобнее для обычных программ.
 
 Сейчас там есть:
 
 < GuiCreator — простые GUI-компоненты поверх Gfx;
+
 < CliKit — работа с аргументами командной строки;
+
 < TextKit — форматирование консольного вывода;
+
 < TestKit — простые assert helpers;
+
 < ConfigKit — key=value / .env конфиги;
+
 < ColorKit — RGB helpers;
+
 < GameKit — collision/math helpers для игр;
+
 < BinaryKit — helpers для записи бинарных данных;
+
 < SourceKit — helpers для лексеров и парсеров;
+
 < DiagnosticKit — форматирование ошибок;
-<CompilerKit — небольшие helpers для написания своих языков;
-<KernelKit и OsKit — безопасные OS-dev helpers;
-< HttpClientKit — helpers для URL и HTTP-запросов;
+
+< CompilerKit — небольшие helpers для написания своих языков;
+
+< KernelKit и OsKit — безопасные OS-dev helpers;
+
+< HttpClientKit — helpers для URL и HTTP-запросов
 а также библиотеки для JSON, TOML, CSV, Hash, Hex, Crypto, Path, File, Gfx, Regex и других задач.
 На данный момент версия MX это 0.1.4 
 
