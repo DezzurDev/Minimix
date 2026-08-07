@@ -95,20 +95,17 @@ add_to_path() {
         echo "  $BIN already in PATH ($shell_rc)"
         return 0
     fi
-    # Отдельная строка, чтобы не дублировать и легко убрать вручную.
     printf '\n# MINIMIX %s\n%s\n' "$VERSION" "$marker" >> "$shell_rc"
     echo "  added '$marker' to $shell_rc"
 }
 
 echo "  adding $BIN to PATH"
 if [ "$SYSTEM" = "1" ]; then
-    # system: симлинки в /usr/local/bin (уже в PATH для всех).
     ln -sf "$BIN/mx"    /usr/local/bin/mx
     ln -sf "$BIN/mxvm"  /usr/local/bin/mxvm
     ln -sf "$BIN/mxvm2" /usr/local/bin/mxvm2
     echo "  linked mx, mxvm, mxvm2 into /usr/local/bin"
 else
-    # user: добавить в ~/.bashrc, ~/.profile, ~/.zshrc (какие есть).
     for rc in "$HOME/.bashrc" "$HOME/.profile" "$HOME/.zshrc"; do
         add_to_path "$rc"
     done
